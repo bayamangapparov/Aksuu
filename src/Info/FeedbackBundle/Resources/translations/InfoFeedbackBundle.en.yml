@@ -1,0 +1,12 @@
+feedback:
+    global: Feedback form
+    label:
+        email: E-mail
+        phone: Phone number
+        message: Message text
+        save: Send message
+        captcha: Insert numbers from the picture
+    title: Feedback
+    header: Here, you may leave your  comments and ask questions
+
+message_send: Your message has been sent successfully

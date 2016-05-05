@@ -1,0 +1,3 @@
+info_page_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: InfoPageBundle:Default:index }

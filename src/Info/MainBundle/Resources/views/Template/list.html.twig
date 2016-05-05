@@ -1,0 +1,13 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+{% block field %}
+
+	{% if value %}
+
+		{% thumbnail value, 'small' %}
+
+
+	{% else %}
+		<img src="{{ asset('public/img/no-image.jpg') }}">
+	{% endif %}
+
+{% endblock %}

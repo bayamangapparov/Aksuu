@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <div id="content">
+
+
+        {% for album in albums %}
+
+            <div class="photoAlbumBlock">
+                <a href="{{ path('info_gallery_album_get',  {'id':album.id} ) }}">
+                    {% thumbnail album.cover, 'big' with {'class': 'photo_gallery', 'title':''} %}
+                </a>
+                <p>
+                    {% if (album.title|length > 37) %}
+                        {{ album.title| striptags| slice(0, 34)| raw }}...
+                    {% else %}
+                        {{ album.title |raw }}
+                    {% endif %}
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        <script type="text/javascript">
+            $(function () {
+                $('#player').magnificPopup({
+                    delegate: 'a',
+                    type: 'iframe'
+                });
+            });
+        </script>
+    {% endblock %}

@@ -1,0 +1,9 @@
+info_main_homepage:
+    path:     /{_locale}
+    defaults: { _controller: InfoMainBundle:Main:index, _locale:ru }
+    requirements:
+        _locale: kg|ru|en
+
+info_main_test:
+    path:     /{_locale}/test/
+    defaults: { _controller: InfoMainBundle:Test:test }

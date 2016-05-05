@@ -1,0 +1,25 @@
+{% for post in photos %}
+    <div class="col1" style="margin-right: 15px;">
+        {% thumbnail post.cover, 'big' %}
+        <table id="" cellspacing="0"
+               style="border-collapse:collapse;">
+            <tbody>
+            <tr>
+                <td>
+                    <div class="colblock-red" style="width: 211px">
+                        {% for galleryHasMedia in post.photoGalleryHasGalleries %}
+                            {% thumbnail galleryHasMedia.media, 'big' %}
+                        {% endfor %}
+                        <span>
+                                <a href="{{ path('info_post_news_get', {'id': post.id }) }}"></a>
+                            </span>
+                        <a href="{{ path('info_post_news_get', {'id': post.id }) }}"
+                           style="color: #fff">
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endfor %}

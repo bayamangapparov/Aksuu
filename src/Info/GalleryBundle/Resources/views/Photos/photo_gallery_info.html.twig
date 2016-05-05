@@ -1,0 +1,36 @@
+<script type="text/javascript" src="{{ asset('public/js/jquery-1.11.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>
+<h4>{{ entity.title }}</h4>
+<div id="#wrapper-photoGallery">
+    <ul id="photoGallery" class="clearfix">
+        <li>
+            <a href="{% path entity.cover, 'reference' %}" title="">
+                {% thumbnail entity.cover, 'big' with {'class': 'photo_gallery'} %}
+            </a>
+        </li>
+        {% for galleryHasMedia in entity.photoGalleryHasGalleries %}
+            <li>
+                <a href="{% path galleryHasMedia.media, 'reference' %}" title="">
+                    {% thumbnail galleryHasMedia.media, 'big' with {'class': 'photo_gallery'} %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#photoGallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            image: {
+                cursor: null,
+                titleSrc: 'title'
+            },
+            gallery: {
+                enabled: true,
+                preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+                navigateByImgClick: true
+            }
+        });
+    });
+</script>

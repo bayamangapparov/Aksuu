@@ -1,0 +1,21 @@
+services:
+
+#    application.sonata.user.registration.form.type:
+#         class: Application\Sonata\UserBundle\Form\Type\RegistrationFormType
+#         arguments: [%fos_user.model.user.class%, %sonata.user.registration.form.options%]
+#         tags:
+#            - { name: form.type, alias: sonata_user_registration}
+
+    sonata_user.profile.form.type:
+        class: Application\Sonata\UserBundle\Form\Type\ProfileType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+#            - { name: form.type, alias: applicationsonata_user_profile }
+            - { name: form.type, alias: sonata_user_profile }
+
+    application_sonata_user.form.type_extension.media:
+        class: Application\Sonata\UserBundle\Form\Extension\MediaTypeExtension
+        tags:
+            -
+                name: form.type_extension
+                alias: sonata_media_type

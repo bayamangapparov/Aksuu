@@ -1,0 +1,9 @@
+services:
+#    info_page.example:
+#        class: Info\PageBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    info_page.admin.page:
+        class: Info\PageBundle\Admin\PageAdmin
+        arguments: [~, Info\PageBundle\Entity\Page, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Page}

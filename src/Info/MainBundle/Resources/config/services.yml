@@ -1,0 +1,21 @@
+services:
+#    info_main.example:
+#        class: Info\MainBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+
+
+    info_main.form.type_extension.media:
+        class: Info\MainBundle\Form\Extension\MediaTypeExtension
+        tags:
+            -
+                name: form.type_extension
+                alias: sonata_media_type
+
+    info_main.admin.test:
+        class: Info\MainBundle\Admin\TestAdmin
+        arguments: [~, Info\MainBundle\Entity\Test, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Test, label: Test}
+        calls:
+            - [ setTranslationDomain, [InfoMainBundle]]

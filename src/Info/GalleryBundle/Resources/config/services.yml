@@ -1,0 +1,32 @@
+services:
+#    info_post.example:
+#        class: Info\PostBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    info_gallery.admin.photo_gallery:
+        class: Info\GalleryBundle\Admin\PhotoGalleryAdmin
+        arguments: [~, Info\GalleryBundle\Entity\PhotoGallery, InfoGalleryBundle:PhotoGalleryAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Галерея, label: Фотогалерея}
+
+    info_gallery.admin.video:
+        class: Info\GalleryBundle\Admin\VideoAdmin
+        arguments: [~, Info\GalleryBundle\Entity\Video, InfoGalleryBundle:VideoAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Галерея, label: Видеорепортажи}
+
+
+    info_gallery.admin.video_gallery:
+        class: Info\GalleryBundle\Admin\VideoGalleryAdmin
+        arguments: [~, Info\GalleryBundle\Entity\VideoGallery, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Галерея, label: Видеогалерея}
+        calls:
+            - [ setTranslationDomain, [InfoPostBundle]]
+
+    info_gallery.admin.photo_gallery_has_gallery:
+        class: Info\GalleryBundle\Admin\PhotoGalleryHasGalleryAdmin
+        arguments: [~, Info\GalleryBundle\Entity\PhotoGalleryHasGallery, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Галерея, label: Медиа}
+
+

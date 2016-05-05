@@ -1,0 +1,26 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+{% block field %}
+
+	{#<a href="{{ path('sonata_media_download', {'id': value|sonata_urlsafeid }) }}">Скачать вложенный файл#}
+		{#&#123;&#35;<button class="file-second-div-content-download" type="button"></button>&#35;&#125;#}
+	{#</a>#}
+
+
+		{#<button class="file-second-div-content-download" type="button"></button>#}
+
+
+
+	{% if value %}
+		{#<a href="{{ path('sonata_media_download', {'id': value.id }) }}">Скачать вложенный файл</a>#}
+		{#{% thumbnail value, 'small' %}#}
+		{#{%  value, 'small' %}#}
+		<a href="{{ path('sonata_media_download', {'id': value|sonata_urlsafeid }) }}">Скачать вложенный файл
+			{#<button class="file-second-div-content-download" type="button"></button>#}
+		</a>
+
+
+	{#{% else %}#}
+		{#<img src="{{ asset('public/img/no-image.jpg') }}">#}
+	{% endif %}
+
+{% endblock %}

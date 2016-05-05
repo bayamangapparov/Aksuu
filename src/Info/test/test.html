@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Upload images with Jquery</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <!--<script type="text/javascript" src="jquery-2.1.1.min.js"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var storedFiles = [];
+            $('#myfiles').on('change', function () {
+                $('#messages').html('');
+                var myfiles = document.getElementById('myfiles');
+                var files = myfiles.files;
+                var i = 0;
+                for (i = 0; i < files.length; i++) {
+                    var readImg = new FileReader();
+                    var file = files[i];
+                    if (file.type.match('image.*')) {
+                        storedFiles.push(file);
+                        readImg.onload = (function (file) {
+                            return function (e) {
+                                $('#uploadedfiles').append('' +
+                                        '<tr class="imageinfo">' +
+                                            '<td><img width="80" height="70" src="' + e.target.result + '"/></td>' +
+                                            '<td>' + file.name + '</td>' +
+                                            '<td>' + Math.round((file.size / 1024)) + 'KB</td>' +
+                                            '<td>' +
+                                        '       <a href="" class="lnkcancelimage" file="' + file.name + '" title="Cancel">' +
+                                                '<img src="rsz_delete.png" width=34" height="34"/>' +
+                                                '</a>' +
+                                            '</td>' +
+                                        '</tr>');
+                            };
+                        })(file);
+                        readImg.readAsDataURL(file);
+                    } else {
+                        alert('the file ' + file.name + ' is not an image<br/>');
+                    }
+                }
+            });
+
+            $('#uploadedfiles').on('click', 'a.lnkcancelimage', function () {
+                $(this).parent().parent().html('');
+                var file = $(this).attr('file');
+                for (var i = 0; i < storedFiles.length; i++) {
+                    if (storedFiles[i].name == file) {
+                        storedFiles.splice(i, 1);
+                        break;
+                    }
+                }
+                return false;
+            });
+
+            $('#lnkupload').click(function () {
+                var data = new FormData();
+                var i = 0;
+                for (i = 0; i < storedFiles.length; i++) {
+                    data.append('files' + i, storedFiles[i]);
+                }
+
+                if (i > 0) {
+                    $.ajax({
+                        url: 'load.php',
+                        type: 'POST',
+                        contentType: false,
+                        data: data,
+                        processData: false,
+                        cache: false
+                    }).done(function (msg) {
+                        storedFiles = [];
+                        if (msg) {
+                            alert(msg);
+                        } else {
+                            $('#messages').html('Images uploaded successfully');
+                        }
+                    }).fail(function () {
+                        alert('error');
+                    });
+                }
+                return false;
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <label><strong>Uploading multiple images</strong></label>
+    <input id="myfiles" type="file" name="myfiles[]" multiple="multiple"/>
+    <a href="" id="lnkupload">Upload</a>
+    <table id="uploadedfiles">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

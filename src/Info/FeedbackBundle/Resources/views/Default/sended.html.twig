@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div class="feedback-accept">
+        <div class="accept-text">
+            <h1>{{ 'message_send'|trans({}, 'InfoFeedbackBundle') }}</h1>
+            <p>
+                {#Тут текст который пояснит что сообщение отправлено и что все хорошо текст может быть 2-3 строчки#}
+            </p>
+            {#<a class="orange-button button" href="{{ path('strokit_core_homepage') }}">{{ 'strokit.home'|trans({},'StrokitCoreBundle') }}</a>#}
+            <a class="blue-button button" href="{{ path('info_feedback') }}">{{ 'feedback.global'|trans({},'InfoFeedbackBundle') }}</a>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+{% endblock body %}

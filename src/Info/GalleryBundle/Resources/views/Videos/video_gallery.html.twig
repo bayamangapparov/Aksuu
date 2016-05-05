@@ -1,0 +1,18 @@
+{% for video in videos %}
+    <div class="col2"
+         style="width: 440px !important; margin-right: 0 !important; margin-bottom: 125px !important;">
+        <table id="" cellspacing="0" style="border-collapse:collapse;">
+            <tbody>
+            <tr>
+                <td>
+                    {% if video %}
+                        <iframe width="674" height="400"
+                                src="http://www.youtube.com/embed/{{ video.url }}">
+                        </iframe>
+                    {% endif %}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endfor %}

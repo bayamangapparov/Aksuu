@@ -1,0 +1,117 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .captcha_feedback {
+            margin-top: -23px;
+            margin-left: 5px;
+        }
+
+        #info_feedbackbundle_feedback_captcha {
+            margin-top: -23px;
+            margin-left: 5px;
+        }
+
+    </style>
+{% endblock %}
+{% block body %}
+    <div id="content">
+
+        {#<article class="form_feedback" style="float: none !important; margin: 0 !important; width: 885px !important;">#}
+            <div class="form-validate-without-mes feedback feedbackForm">
+                <h5 style="text-align: left">{{ 'feedback.header'|trans({},'InfoFeedbackBundle') }}</h5>
+                <br>
+                {{ form_start(form) }}
+                <div class="item">
+                    {% set error = '' %}
+                    {% set error_message = '' %}
+                    {% if form.email.vars.errors|length %}
+                        {% set error = 'error' %}
+                        {% set error_message = form_errors(form.email)|striptags %}
+                    {% endif %}
+                    {{ form_widget(form.email, {'attr':{'class':error ~ ' margin-none', 'title':error_message} }) }}
+
+                    {% set error = '' %}
+                    {% set error_message = '' %}
+                    {% if form.phone.vars.errors|length %}
+                        {% set error = 'error' %}
+                        {% set error_message = form_errors(form.phone)|striptags %}
+                    {% endif %}
+                    {{ form_widget(form.phone, {'attr':{'class':error ~ ' margin-none', 'title':error_message} }) }}
+                    <div class="clear"></div>
+                </div>
+                <br>
+                <div class="item">
+                    <div class="textarea">
+                        {{ form_widget(form.message, {'attr':{'cols':68, 'rows':20} }) }}
+                    </div>
+                </div>
+                <br>
+                <div class="item captcha-block">
+                    {% set error = '' %}
+                    {% set error_message = '' %}
+                    {% if form.captcha.vars.errors|length %}
+                        {% set error = 'error' %}
+                        {% set error_message = form_errors(form.captcha)|striptags %}
+                    {% endif %}
+                    {{ form_widget(form.captcha, {'attr':{'class':error , 'title':error_message} }) }}
+                    {{ form_widget(form.save, {'attr':{'class':'captcha_feedback'} }) }}
+                    <div class="clear"></div>
+                </div>
+                {{ form_end(form) }}
+                <br>
+                <br>
+            </div>
+            <div class="feedbackContacts">
+                <h5 style="text-align: left">КОНТАКТЫ:</h5>
+                {#<h5 style="text-align: left">{{ 'page.contact.title'|trans({}, 'InfoPageBundle') }}:</h5>#}
+                <p>
+                    Наш адрес:
+                    <br/>
+
+                    Индекс:    720005
+                    <br/>
+                    Кыргызская Республика
+
+                    г. Бишкек, улица О.Медерова, 163
+                    <br/>
+                    Факс:      0312  54 90 55
+                    <br/>
+
+
+                    Начальник управления  информационного обеспечения:
+
+                    Борубаева Гульмира Мурза-Алиевна
+                    <br/>
+                    рабочий:   0312  54 92 54,  0312 54 28 99
+                    <br/>
+                    мобильный: 0553-113-543
+                    <br/>
+                    e-mail:  pressagpskg@gmail.com
+                    <br/>
+
+
+                    ТЕЛЕФОНЫ:
+                    <br/>
+                    Главный штаб Государственной пограничной службы Кыргызской Республики:
+                    <br/>
+                    Оперативный дежурный (0312) 54 80 40
+                    <br/>
+                    Дежурный по Главному штабу (0312) 54 95 87
+                    <br/>
+                    Управление ГПС КР по Баткенской области:
+                    Оперативный дежурный (0312) 29 11 26, (03622) 5 04 68
+                    <br/>
+                    Управление ГПС КР по Ошской и Жалал-Абадской областям:
+                    Оперативный дежурный (0312) 29 10 02, (03222) 8 72 62
+                    <br/>
+                    Управление ГПС КР по Чуйской области:
+                    Оперативный дежурный (0312) 60 71 44
+
+                </p>
+            </div>
+        {#</article>#}
+
+    </div>
+{% endblock body %}
