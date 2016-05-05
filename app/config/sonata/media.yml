@@ -28,7 +28,7 @@ sonata_media:
             providers:
                 - sonata.media.provider.image
             formats:
-                small:   { height: 194, quality: 90}
+                small:   {width: 190, height: 100, quality: 90}
 
         cover_photo_gallery:
             providers:

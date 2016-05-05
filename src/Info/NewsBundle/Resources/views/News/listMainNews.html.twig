@@ -1,0 +1,75 @@
+
+<div class="content">
+    <h2>Жанылыктар</h2>
+    {% for entity in entities %}
+        <div class="raw">
+            <div class="media-rigth media-middle">
+                <a href="#">
+                    <div>
+                        {% thumbnail entity.photo, 'small' with {'class': 'thumbnail','alt': '...', 'style': 'float: left; margin-right: 15px'} %}
+                    </div>
+                    <h3>{{ entity.title }} </h3>
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"> {{ entity.date | date('d.m.Y')  }} </h4>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    {% endfor  %}
+    {#<div class="raw">#}
+    {#<div>#}
+    {#<div class="media-rigth media-middle">#}
+    {#<a href="#">#}
+    {#<img class="thumbnail" src="{{ asset('public/img/slider4.jpg') }}" alt="..." width="160"#}
+    {#height="100"#}
+    {#style="float: left; margin-right: 15px">#}
+
+    {#<h3>Наименование грантового проекта: Строительство Лейлекского#}
+    {#водохранилища#}
+    {#Наименование бенефициара: Маргун, Бешкент, Жаны-Жер,#}
+    {#Кулунду айыл Окмоту#}
+    {#</h3>#}
+    {#</a>#}
+    {#</div>#}
+    {#<div class="media-body">#}
+    {#<h4 class="media-heading">Middle aligned media</h4>#}
+    {#dfdlf jsdjfld jslkf jsdljflk#}
+
+    {#</div>#}
+    {#</div>#}
+    {#<div class="raw">#}
+    {#<div class="media-rigth media-middle">#}
+    {#<a href="#">#}
+    {#<img class="thumbnail" src="{{ asset('public/img/slider4.jpg') }}" alt="..." width="160" height="100"#}
+    {#style="float: left; margin-right: 15px">#}
+    {#<h3>Наименование грантового проекта: Строительство Лейлекского#}
+    {#водохранилища#}
+    {#Наименование бенефициара: Маргун, Бешкент, Жаны-Жер,#}
+    {#Кулунду айыл Окмоту#}
+    {#</h3>#}
+    {#</a>#}
+    {#</div>#}
+    {#<div class="media-body">#}
+    {#<h4 class="media-heading">Middle aligned media</h4>#}
+    {#dfdlf jsdjfld jslkf jsdljflk#}
+
+    {#</div>#}
+    {#<div class="media-rigth media-middle">#}
+    {#<a href="#">#}
+    {#<img class="thumbnail" src="{{ asset('public/img/slider4.jpg') }}" alt="..." width="160" height="100"#}
+    {#style="float: left; margin-right: 15px">#}
+    {#<h3>Наименование грантового проекта: Строительство Лейлекского#}
+    {#водохранилища#}
+    {#Наименование бенефициара: Маргун, Бешкент, Жаны-Жер,#}
+    {#Кулунду айыл Окмоту#}
+    {#</h3>#}
+    {#</a>#}
+    {#</div>#}
+    {#<div class="media-body">#}
+    {#<h4 class="media-heading">Middle aligned media</h4>#}
+
+    {#</div>#}
+    {#</div>#}
