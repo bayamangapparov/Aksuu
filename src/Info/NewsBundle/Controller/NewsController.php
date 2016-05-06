@@ -13,7 +13,7 @@ class NewsController extends Controller
         return $this->render('InfoNewsBundle:News:listMainNews.html.twig', array('entities' => $news));
     }
 
-    public function getNewsAction(News $id)
+    public function getNewsByIdAction(News $id)
     {
         return $this->render('InfoNewsBundle:News:getNews.html.twig',
             array('news' => $id));

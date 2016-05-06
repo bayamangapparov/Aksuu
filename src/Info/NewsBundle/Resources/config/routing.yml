@@ -3,4 +3,4 @@ info_news_homepage:
     defaults: { _controller: InfoNewsBundle:Default:index }
 info_news_get:
     path:     /get/news/{id}
-    defaults: { _controller: InfoNewsBundle:News:getNews }
+    defaults: { _controller: InfoNewsBundle:News:getNewsById }
