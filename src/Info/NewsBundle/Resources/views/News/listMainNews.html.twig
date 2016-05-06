@@ -4,7 +4,7 @@
     {% for entity in entities %}
         <div class="raw">
             <div class="media-rigth media-middle">
-                <a href="#">
+                <a href="{{ path('info_news_get', {'id':entity.id}) }}">
                     <div>
                         {% thumbnail entity.photo, 'small' with {'class': 'thumbnail','alt': '...', 'style': 'float: left; margin-right: 15px'} %}
                     </div>

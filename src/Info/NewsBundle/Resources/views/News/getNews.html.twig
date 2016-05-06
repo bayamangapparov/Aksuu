@@ -1,0 +1,7 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <h1 style="color:#2f2bff; font-size: 70" >{{ news.title }}<br> </h1>
+    <h3>{{ news.text }} </h3> <br>
+    {{ news.date | date('d.m.Y') }}
+    <br><br>
+{% endblock %}

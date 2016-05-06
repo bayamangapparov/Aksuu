@@ -1,3 +1,6 @@
 info_news_homepage:
     path:     /hello/{name}
     defaults: { _controller: InfoNewsBundle:Default:index }
+info_news_get:
+    path:     /get/news/{id}
+    defaults: { _controller: InfoNewsBundle:News:getNews }
