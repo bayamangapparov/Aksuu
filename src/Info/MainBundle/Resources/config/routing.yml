@@ -7,3 +7,6 @@ info_main_homepage:
 info_main_test:
     path:     /{_locale}/test/
     defaults: { _controller: InfoMainBundle:Test:test }
+info_main_page:
+    path:     /index
+    defaults: { _controller: InfoMainBundle:Main:index }

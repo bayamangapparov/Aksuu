@@ -1,3 +1,15 @@
 info_page_homepage:
     path:     /hello/{name}
     defaults: { _controller: InfoPageBundle:Default:index }
+info_page_history:
+    path:     /history
+    defaults: { _controller: InfoPageBundle:Default:getHistoryPage }
+info_page_sostav:
+    path:     /sostav
+    defaults: { _controller: InfoPageBundle:Default:getSostavPage }
+info_page_vacancy:
+    path:     /vacancy
+    defaults: { _controller: InfoPageBundle:Default:getVacancyPage }
+info_page_contact:
+    path:     /contact
+    defaults: { _controller: InfoPageBundle:Default:getContactPage }
