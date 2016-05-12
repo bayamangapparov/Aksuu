@@ -1,0 +1,99 @@
+.dom-heading.dom-heading-1 {
+    width: 188px;
+    height: 36px;
+    font-family:'helvetica neue';
+    font-weight: 200;
+    font-size: 13pt;
+    line-height: 1.2;
+    position: absolute;
+    top: 17.5px;
+    left: 52.5px;
+}
+.dom-heading.dom-heading-2 {
+    width: 188px;
+    height: 36px;
+    font-family:'helvetica neue';
+    font-weight: 200;
+    font-size: 13pt;
+    line-height: 1.2;
+    position: absolute;
+    top: 55.24000000000001px;
+    left: 52.5px;
+}
+.dom-heading.dom-heading-3 {
+    width: 188px;
+    height: 36px;
+    font-family:'helvetica neue';
+    font-weight: 200;
+    font-size: 13pt;
+    line-height: 1.2;
+    position: absolute;
+    top: 92.13000000000011px;
+    left: 53.49000000000001px;
+}
+.dom-heading.dom-heading-4 {
+    width: 188px;
+    height: 36px;
+    font-family:'helvetica neue';
+    font-weight: 200;
+    font-size: 13pt;
+    line-height: 1.2;
+    position: absolute;
+    top: 130.73000000000002px;
+    left: 52.5px;
+}
+.dom-heading.dom-heading-5 {
+    width: 188px;
+    height: 36px;
+    font-family:'helvetica neue';
+    font-weight: 200;
+    font-size: 13pt;
+    line-height: 1.2;
+    position: absolute;
+    top: 168.47000000000003px;
+    left: 52.5px;
+}
+.dom-heading.dom-heading-6 {
+    width: 134px;
+    height: 42px;
+    font-family:'helvetica neue';
+    font-size: 20pt;
+    line-height: 1.2;
+    margin: 9px 0 0 79px;
+}
+.rectangle {
+    background: #ebebeb;
+    border: 1px solid #c2c2c2;
+    margin: 0px;
+    width: 286px;
+    height: 261.03999999999996px;
+    position: absolute;
+    top: 44.960000000000036px;
+    left: 86px;
+}
+.rectangle-1 {
+    background: #ebebeb;
+    border: 1px solid #c2c2c2;
+    margin: -5.960000000000036px 0 0 0px;
+    width: 286px;
+    height: 264px;
+    position: relative;
+}
+.rectangle-2 {
+    background: #ebebeb;
+    border: 1px solid #c2c2c2;
+    margin: 50px 0 0 -5px;
+    width: 292px;
+    height: 210px;
+    position: relative;
+}
+.rectangle-3 {
+    background: #d4d4d4;
+    border: 1px solid #c2c2c2;
+    margin: 0px;
+    width: 292px;
+    height: 59px;
+    position: absolute;
+    top: 34px;
+    left: 83px;
+}
