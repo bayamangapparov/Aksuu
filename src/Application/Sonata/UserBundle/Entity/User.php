@@ -10,7 +10,6 @@
  */
 
 namespace Application\Sonata\UserBundle\Entity;
-
 use Sonata\UserBundle\Entity\BaseUser as BaseUser;
 
 /**

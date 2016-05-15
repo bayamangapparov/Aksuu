@@ -29,6 +29,10 @@ class PhotoGalleryAdmin extends Admin
     {
         $listMapper
             ->add('id')
+            ->add('cover', 'string', array(
+                'template' => 'InfoMainBundle:Template:list.html.twig',
+                'label' => 'Главное фото'
+            ))
             ->add('title')
             ->add('createDate')
             ->add('_action', 'actions', array(
@@ -50,17 +54,17 @@ class PhotoGalleryAdmin extends Admin
             ->add('translations', 'a2lix_translations', array(
                 'fields' => array('title' => array('label' => 'Название альбома'))
             ))
-            ->add('cover', 'file', array(
-                'multiple' => true,
-                'data_class' => null,
-            ))
-//            ->add('cover', 'sonata_type_model_list', array(), array(
-//                'link_parameters' => array(
-//                    'context' => 'cover_photo_gallery',
-//                    'provider' => 'sonata.media.provider.image',
-//                    'required' => false,
-//                ),
+//            ->add('cover', 'file', array(
+//                'multiple' => true,
+//                'data_class' => null,
 //            ))
+            ->add('cover', 'sonata_type_model_list', array(), array(
+                'link_parameters' => array(
+                    'context' => 'photo_gallery',
+                    'provider' => 'sonata.media.provider.image',
+                    'required' => false,
+                ),
+            ))
             ->add('photoGalleryHasGalleries', 'sonata_type_collection', array(
                 'type_options' => array('delete' => false),
 
@@ -71,6 +75,7 @@ class PhotoGalleryAdmin extends Admin
                     'context' => 'photo_gallery',
                 ),
             ))
+
         ;
     }
 
@@ -83,6 +88,10 @@ class PhotoGalleryAdmin extends Admin
             ->add('id')
 //            ->add('title')
             ->add('createDate')
+            ->add('cover', 'string', array(
+                'template' => 'InfoMainBundle:Template:list.html.twig',
+                'label' => 'Главное фото'
+            ))
         ;
     }
 }

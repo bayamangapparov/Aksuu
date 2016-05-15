@@ -36,6 +36,15 @@ sonata_media:
             formats:
                 small:   { width: 194, height: 194, quality: 90}
 
+        photo_gallery:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                small: { width: 75 , quality: 80}
+#                medium: { width: 125 , quality: 80}
+                big: { width: 265 , quality: 80}
+
         file:
             download:
                 strategy: sonata.media.security.public_strategy

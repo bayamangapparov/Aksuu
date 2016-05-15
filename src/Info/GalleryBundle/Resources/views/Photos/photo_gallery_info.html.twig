@@ -1,36 +1,85 @@
-<script type="text/javascript" src="{{ asset('public/js/jquery-1.11.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>
-<h4>{{ entity.title }}</h4>
-<div id="#wrapper-photoGallery">
-    <ul id="photoGallery" class="clearfix">
-        <li>
-            <a href="{% path entity.cover, 'reference' %}" title="">
-                {% thumbnail entity.cover, 'big' with {'class': 'photo_gallery'} %}
-            </a>
-        </li>
-        {% for galleryHasMedia in entity.photoGalleryHasGalleries %}
-            <li>
-                <a href="{% path galleryHasMedia.media, 'reference' %}" title="">
-                    {% thumbnail galleryHasMedia.media, 'big' with {'class': 'photo_gallery'} %}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
-<script type="text/javascript">
-    $(function () {
-        $('#photoGallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            image: {
-                cursor: null,
-                titleSrc: 'title'
-            },
-            gallery: {
-                enabled: true,
-                preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
-                navigateByImgClick: true
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link type="text/css" rel="stylesheet" href="{{ asset('public/css/bootstrap.min.css') }}"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('public/css/bootstrap-theme.css') }}"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('public/css/bootstrap-theme.min.css') }}"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('public/css/bootstrap.css') }}"/>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="{{ asset('public/css/style.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('public/css/tabstyle.css') }}" rel="stylesheet" type="text/css">
+
+        <style>
+            h2  {
+                color: blue;
+                text-align: center;
+                font-family: "new times roman";
             }
+        </style>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% include 'header.html.twig' %}
+{% block body %}
+    <script type="text/javascript" src="{{ asset('public/js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>
+    <h4>{{ entity.title }}</h4>
+    <div id="#wrapper-photoGallery">
+        <ul id="photoGallery" class="clearfix">
+
+                <a href="{% path entity.cover, 'reference' %}" title="">
+                    {% thumbnail entity.cover, 'big' with {'class': 'photo_gallery'} %}
+                </a>
+
+            {% for galleryHasMedia in entity.photoGalleryHasGalleries %}
+
+                    <a href="{% path galleryHasMedia.media, 'reference' %}" title="">
+                        {% thumbnail galleryHasMedia.media, 'big' with {'class': 'photo_gallery'} %}
+                    </a>
+
+            {% endfor %}
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#photoGallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                image: {
+                    cursor: null,
+                    titleSrc: 'title'
+                },
+                gallery: {
+                    enabled: true,
+                    preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+                    navigateByImgClick: true
+                }
+            });
         });
-    });
-</script>
+    </script>
+{% endblock %}
+{% include 'footer.html.twig' %}
+{% block javascripts %}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+    {#<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>#}
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+{% endblock %}
+</body>
+
+
+

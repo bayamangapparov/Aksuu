@@ -75,6 +75,7 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
@@ -193,4 +194,3 @@ knp_paginator:
 #        pagination: 'KnpPaginatorBundle:Pagination:sliding.html.twig'
         pagination: InfoMainBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
         sortable: 'KnpPaginatorBundle:Pagination:sortable_link.html.twig'
-
