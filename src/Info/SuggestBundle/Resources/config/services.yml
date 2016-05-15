@@ -1,0 +1,9 @@
+services:
+#    info_suggest.example:
+#        class: Info\SuggestBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    info_suggest.admin.suggest:
+        class: Info\SuggestBundle\Admin\SuggestAdmin
+        arguments: [~, Info\SuggestBundle\Entity\Suggest, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Suggest}

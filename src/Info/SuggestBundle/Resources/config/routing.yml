@@ -1,0 +1,3 @@
+info_suggest_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: InfoSuggestBundle:Default:index }

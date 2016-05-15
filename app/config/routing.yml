@@ -1,3 +1,7 @@
+info_suggest:
+    resource: "@InfoSuggestBundle/Resources/config/routing.yml"
+    prefix:   /
+
 info_page:
     resource: "@InfoPageBundle/Resources/config/routing.yml"
     prefix:   /
