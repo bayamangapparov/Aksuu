@@ -62,8 +62,7 @@ class Suggest
      * @ORM\Column(name="createdDate", type="date")
      */
     private $createdDate;
-
-
+    
     public function __construct()
     {
         $this->date = new \DateTime();
