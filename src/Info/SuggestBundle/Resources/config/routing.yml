@@ -1,3 +1,6 @@
 info_suggest_create:
     path:     /suggest/create
     defaults: { _controller: InfoSuggestBundle:Suggest:createSuggest }
+info_suggest_list:
+    path:     /suggest/list
+    defaults: { _controller: InfoSuggestBundle:Suggest:suggestList }
