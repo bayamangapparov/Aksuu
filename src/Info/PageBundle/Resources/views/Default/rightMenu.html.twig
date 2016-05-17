@@ -1,0 +1,248 @@
+<div class="col-md-2">
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">Коомдук фонд, уюмдар</h4>
+
+            <p class="list-group-item-text">Орусиянын Эмгек министрлиги жарыялаган маалыматка ылайык,
+                кардиоревматолог,
+            </p>
+        </a>
+    </div>
+
+    <div class="list-group">
+        <a href="{{ path('info_suggest_create') }}" class="list-group-item active">
+            <h4 class="list-group-item-heading">Сиздин сунуштарыныз жана кайрылууларыныз!</h4>
+
+            <p class="list-group-item-text">Орусиянын Эмгек министрлиги жарыялаган маалыматка ылайык,
+                кардиоревматолог,
+            </p>
+        </a>
+    </div>
+    <br>
+
+    <!-- weather widget start -->
+    <!-- weather widget start -->
+    <div id="m-booked-bl-simple-week-vertical-40937"><a href="//nochi.com/weather/batken-w411763"
+                                                        class="booked-wzs-160-275"
+                                                        style="background-color:#0a6cff;">
+            <div class="booked-wzs-160-275-data wrz-18">
+                <div class="booked-wzs-160-275-right">
+                    <div class="booked-wzs-day-deck">
+                        <div class="booked-wzs-day-val">
+                            <div class="booked-wzs-day-number"><span class="plus">+</span>12</div>
+                            <div class="booked-wzs-day-dergee">
+                                <div class="booked-wzs-day-dergee-val">&deg;</div>
+                                <div class="booked-wzs-day-dergee-name">C</div>
+                            </div>
+                        </div>
+                        <div class="booked-wzs-day">
+                            <div class="booked-wzs-day-d"><span class="plus">+</span>12&deg;</div>
+                            <div class="booked-wzs-day-n"><span class="plus">+</span>10&deg;</div>
+                        </div>
+                    </div>
+                    <div class="booked-wzs-160-275-city">Баткен</div>
+                    <div class="booked-wzs-160-275-date">Четверг, 12</div>
+                </div>
+            </div>
+            <table cellpadding="0" cellspacing="0" class="booked-wzs-table-160">
+                <tr>
+                    <td class="week-day">Пятница</td>
+                    <td class="week-day-ico">
+                        <div class="wrz-sml wrzs-18"></div>
+                    </td>
+                    <td class="week-day-val"><span class="plus">+</span>15&deg;</td>
+                    <td class="week-day-val"><span class="plus">+</span>7&deg;</td>
+                </tr>
+                <tr>
+                    <td class="week-day">Суббота</td>
+                    <td class="week-day-ico">
+                        <div class="wrz-sml wrzs-18"></div>
+                    </td>
+                    <td class="week-day-val"><span class="plus">+</span>21&deg;</td>
+                    <td class="week-day-val"><span class="plus">+</span>11&deg;</td>
+                </tr>
+                <tr>
+                    <td class="week-day">Воскресенье</td>
+                    <td class="week-day-ico">
+                        <div class="wrz-sml wrzs-18"></div>
+                    </td>
+                    <td class="week-day-val"><span class="plus">+</span>18&deg;</td>
+                    <td class="week-day-val"><span class="plus">+</span>11&deg;</td>
+                </tr>
+                <tr>
+                    <td class="week-day">Понедельник</td>
+                    <td class="week-day-ico">
+                        <div class="wrz-sml wrzs-18"></div>
+                    </td>
+                    <td class="week-day-val"><span class="plus">+</span>16&deg;</td>
+                    <td class="week-day-val"><span class="plus">+</span>10&deg;</td>
+                </tr>
+                <tr>
+                    <td class="week-day">Вторник</td>
+                    <td class="week-day-ico">
+                        <div class="wrz-sml wrzs-01"></div>
+                    </td>
+                    <td class="week-day-val"><span class="plus">+</span>14&deg;</td>
+                    <td class="week-day-val"><span class="plus">+</span>6&deg;</td>
+                </tr>
+                <tr>
+                    <td class="week-day">Среда</td>
+                    <td class="week-day-ico">
+                        <div class="wrz-sml wrzs-22"></div>
+                    </td>
+                    <td class="week-day-val"><span class="plus">+</span>9&deg;</td>
+                    <td class="week-day-val"><span class="plus">+</span>6&deg;</td>
+                </tr>
+            </table>
+            <div class="booked-wzs-center"><span class="booked-wzs-bottom-l">Прогноз на неделю</span></div>
+        </a>
+        <script type="text/javascript"> var css_file = document.createElement("link");
+            css_file.setAttribute("rel", "stylesheet");
+            css_file.setAttribute("type", "text/css");
+            css_file.setAttribute("href", '//s.bookcdn.com/css/w/booked-wzs-widget-160x275.css?v=0.0.1');
+            document.getElementsByTagName("head")[0].appendChild(css_file);
+            function setWidgetData(data) {
+                if (typeof(data) != 'undefined' && data.results.length > 0) {
+                    for (var i = 0; i < data.results.length; ++i) {
+                        var objMainBlock = document.getElementById('m-booked-bl-simple-week-vertical-40937');
+                        if (objMainBlock !== null) {
+                            var copyBlock = document.getElementById('m-bookew-weather-copy-' + data.results[i].widget_type);
+                            objMainBlock.innerHTML = data.results[i].html_code;
+                            if (copyBlock !== null) objMainBlock.appendChild(copyBlock);
+                        }
+                    }
+                } else {
+                    alert('data=undefined||data.results is empty');
+                }
+            } </script>
+        <script type="text/javascript" charset="UTF-8"
+                src="http://widgets.booked.net/weather/info?action=get_weather_info&ver=4&cityID=w411763&type=4&scode=124&ltid=3540&domid=589&cmetric=1&wlangID=20&color=0a6cff&wwidth=250&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script>
+    </div>
+    <!-------Do not change below this line------->
+    <!-- this script got from www.htmlbestcodes.com-Coded by: Krishna Eydat -->
+
+    <br>
+
+    <body>
+    <center>
+        <script language="javascript" type="text/javascript">
+            var day_of_week = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+            var month_of_year = new Array('Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь');
+
+            //  DECLARE AND INITIALIZE VARIABLES
+            var Calendar = new Date();
+
+            var year = Calendar.getFullYear();     // Returns year
+            var month = Calendar.getMonth();    // Returns month (0-11)
+            var today = Calendar.getDate();    // Returns day (1-31)
+            var weekday = Calendar.getDay();    // Returns day (1-31)
+
+            var DAYS_OF_WEEK = 7;    // "constant" for number of days in a week
+            var DAYS_OF_MONTH = 31;    // "constant" for number of days in a month
+            var cal;    // Used for printing
+
+            Calendar.setDate(1);    // Start the calendar day at '1'
+            Calendar.setMonth(month);    // Start the calendar month at now
+
+
+            /* VARIABLES FOR FORMATTING
+             NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+             tags to customize your caledanr's look. */
+
+            var TR_start = '<TR>';
+            var TR_end = '</TR>';
+            var highlight_start = '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><CENTER>';
+            var highlight_end = '</CENTER></TD></TR></TABLE></B>';
+            var TD_start = '<TD WIDTH="30"><CENTER>';
+            var TD_end = '</CENTER></TD>';
+
+            /* BEGIN CODE FOR CALENDAR
+             NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+             tags to customize your calendar's look.*/
+
+            cal = '<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=BBBBBB><TR><TD>';
+            cal += '<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+            cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#EFEFEF"><CENTER><B>';
+            cal += month_of_year[month] + '   ' + year + '</B>' + TD_end + TR_end;
+            cal += TR_start;
+
+            //   DO NOT EDIT BELOW THIS POINT  //
+
+            // LOOPS FOR EACH DAY OF WEEK
+            for (index = 0; index < DAYS_OF_WEEK; index++) {
+
+// BOLD TODAY'S DAY OF WEEK
+                if (weekday == index)
+                    cal += TD_start + '<B>' + day_of_week[index] + '</B>' + TD_end;
+
+// PRINTS DAY
+                else
+                    cal += TD_start + day_of_week[index] + TD_end;
+            }
+
+            cal += TD_end + TR_end;
+            cal += TR_start;
+
+            // FILL IN BLANK GAPS UNTIL TODAY'S DAY
+            for (index = 0; index < Calendar.getDay(); index++)
+                cal += TD_start + '  ' + TD_end;
+
+            // LOOPS FOR EACH DAY IN CALENDAR
+            for (index = 0; index < DAYS_OF_MONTH; index++) {
+                if (Calendar.getDate() > index) {
+                    // RETURNS THE NEXT DAY TO PRINT
+                    week_day = Calendar.getDay();
+
+                    // START NEW ROW FOR FIRST DAY OF WEEK
+                    if (week_day == 0)
+                        cal += TR_start;
+
+                    if (week_day != DAYS_OF_WEEK) {
+
+                        // SET VARIABLE INSIDE LOOP FOR INCREMENTING PURPOSES
+                        var day = Calendar.getDate();
+
+                        // HIGHLIGHT TODAY'S DATE
+                        if (today == Calendar.getDate())
+                            cal += highlight_start + day + highlight_end + TD_end;
+
+                        // PRINTS DAY
+                        else
+                            cal += TD_start + day + TD_end;
+                    }
+
+                    // END ROW FOR LAST DAY OF WEEK
+                    if (week_day == DAYS_OF_WEEK)
+                        cal += TR_end;
+                }
+
+                // INCREMENTS UNTIL END OF THE MONTH
+                Calendar.setDate(Calendar.getDate() + 1);
+
+            }// end for loop
+
+            cal += '</TD></TR></TABLE></TABLE>';
+
+            //  PRINT CALENDAR
+            document.write(cal);
+
+            //  End -->
+        </script>
+    </center>
+    <br/>
+    <div align="center" style="margin-top: 10px;">
+        <div align="center"
+             style="margin: 0px; padding: 0px; border: 2px solid rgb(136, 136, 136); width: 135px; background-color: rgb(255, 255, 255);">
+            <div align="center"
+                 style="width: 100%; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(136, 136, 136); margin: 0px; padding: 0px; text-align: center; color: rgb(0, 0, 0); background-color: rgb(48, 128, 192);">
+                <a href="http://fx-rate.net/KGS/"
+                   style="text-decoration: none; font-size: 14px; font-weight: bold; text-align: center; color: rgb(0, 0, 0);"><img
+                            src="http://fx-rate.net/images/countries/kg.png"
+                            style="margin: 0px; padding: 0px; border: none;"> Кыргызстан курс Сом Обмен</a>
+            </div>
+            <script type="text/javascript"
+                    src="http://fx-rate.net/fx-rates2.php?label_name=Кыргызстан курс Сом Обмен&lab=1&width=135&currency=KGS&cp1_Hex=000000&cp2_Hex=FFFFFF&cp3_Hex=3080c0&hbg=0&flag_code=kg&length=short&label_type=currency&cp=000000,FFFFFF,3080c0&cid=USD,RUB,KZT,UZS,EUR&lang=ru"></script>
+        </div>
+    </div>
+</div>

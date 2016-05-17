@@ -33,6 +33,8 @@ class DefaultController extends Controller
         $page = $this->getDoctrine()->getRepository('InfoPageBundle:Page')->find(5);
         return $this->render('InfoPageBundle:Default:showPage.html.twig', array('page' => $page));
     }
+    
+    
 
 
 }

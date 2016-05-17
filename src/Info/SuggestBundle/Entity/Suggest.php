@@ -65,7 +65,7 @@ class Suggest
     
     public function __construct()
     {
-        $this->date = new \DateTime();
+        $this->createdDate = new \DateTime();
     }
     /**
      * Get id

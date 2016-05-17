@@ -17,13 +17,11 @@ class SuggestAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id')
             ->add('name')
             ->add('phonenumber')
             ->add('email')
             ->add('message')
             ->add('active')
-            ->add('createdDate')
         ;
     }
 
@@ -33,12 +31,12 @@ class SuggestAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
             ->add('name')
             ->add('phonenumber')
             ->add('email')
-            ->add('message')
-            ->add('active')
+            ->add('active', null, array(
+                'editable' => true
+            ))
             ->add('createdDate')
             ->add('_action', 'actions', array(
                 'actions' => array(

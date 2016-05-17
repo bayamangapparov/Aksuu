@@ -29,4 +29,13 @@ class SuggestController extends Controller
             array('form' => $form->createView())
         );
     }
+
+    public function suggestListAction()
+    {
+        $suggest = $this->getDoctrine()->getRepository('InfoSuggestBundle:Suggest')->findByActive(true);
+
+        return $this->render('InfoSuggestBundle:Suggest:listSuggest.html.twig',
+            array('entity'=>$suggest)
+        );
+    }
 }

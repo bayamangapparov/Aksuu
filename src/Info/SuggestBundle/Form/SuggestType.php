@@ -17,7 +17,7 @@ class SuggestType extends AbstractType
         $builder
             ->add('name')
             ->add('phonenumber')
-            ->add('email')
+            ->add('email', 'email')
             ->add('message')
         ;
     }
