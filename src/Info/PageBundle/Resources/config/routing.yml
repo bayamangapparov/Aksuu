@@ -13,3 +13,7 @@ info_page_vacancy:
 info_page_contact:
     path:     /contact
     defaults: { _controller: InfoPageBundle:Default:getContactPage }
+
+info_page_get:
+    path:     /get/page/{id}
+    defaults: { _controller: InfoPageBundle:Page:getPage }

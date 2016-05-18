@@ -19,6 +19,7 @@ class SuggestType extends AbstractType
             ->add('phonenumber')
             ->add('email', 'email')
             ->add('message')
+            ->add('captcha', 'captcha', array('attr'=>array('placeholder'=>'')))
         ;
     }
     

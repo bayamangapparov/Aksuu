@@ -21,19 +21,7 @@
     </div>
     <br>
     <br>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li role="presentation" class="active"><a href="{{ path('info_main_homepage') }}">Негизги бет</a></li>
-                    <li role="presentation"><a href="{{ path('info_page_history') }}">Райондун тарыхы</a></li>
-                    <li role="presentation"><a href="{{ path('info_page_sostav') }}">Администрациянын курамы</a></li>
-                    <li role="presentation"><a href="{{ path('info_page_vacancy') }}">Кызматтык бош орун</a></li>
-                    <li role="presentation"><a href="{{ path('info_gallery_photo_list') }}">Фотогалерея</a></li>
-                    <li role="presentation"><a href="{{ path('info_page_contact') }}">Байланыш</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+   {# start top menu #}
+        {{ render(controller('InfoPageBundle:Page:topMenu')) }}
+   {# end top menu #}
 

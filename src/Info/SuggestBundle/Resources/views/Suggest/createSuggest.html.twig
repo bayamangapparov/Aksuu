@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             {# left Menu start#}
-            {{ include('InfoPageBundle:Default:leftMenu.html.twig') }}
+            {{ render(controller('InfoPageBundle:Page:leftMenu')) }}
             {# left Menu end#}
 
             <div class="col-md-7">
@@ -23,6 +23,10 @@
                 <div class="col-md-12" style="text-align: center; margin-top: 25px">
                     <label>Кат</label>
                     {{ form_widget(form.message, {'attr':{'class':'form-control', 'style':'height: 233px; width: 624px;'} }) }}
+                </div>
+                <div class="col-md-12" style="text-align: center; margin-top: 25px">
+                    <label>Сыр соз</label>
+                    {{ form_widget(form.captcha) }}
                 </div>
 
                 <button type="submit" style="margin-top: 25px; margin-right: 20px" class="btn btn-default detail-sort-call-button pull-right">
