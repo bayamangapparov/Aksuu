@@ -1,15 +1,19 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li role="presentation"><a href="{{ path('info_main_homepage') }}">Негизги бет</a></li>
-                {% for page in entity %}
-                    <li role="presentation">
-                        <a href="{{ path('info_page_get', {'id':page.id}) }}">{{ page.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="{{ path('info_main_homepage') }}">Негизги бет</a></li>
+                    {% for page in entity %}
+                        <li role="presentation">
+                            <a href="{{ path('info_page_get', {'id':page.id}) }}">{{ page.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</div>

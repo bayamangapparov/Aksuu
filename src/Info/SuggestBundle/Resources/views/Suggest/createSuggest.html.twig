@@ -2,11 +2,17 @@
 {% block body %}
     <div class="container">
         <div class="row">
+            {% for flash_message in app.session.flashBag.get('success') %}
+                <div class="alert alert-success">
+                    {{ flash_message }}
+                </div>
+            {% endfor %}
             {# left Menu start#}
             {{ render(controller('InfoPageBundle:Page:leftMenu')) }}
             {# left Menu end#}
 
             <div class="col-md-7">
+
                 {{ form_start(form) }}
                 <div class="col-md-12" style="text-align: center">
                     <label>ФИО</label>

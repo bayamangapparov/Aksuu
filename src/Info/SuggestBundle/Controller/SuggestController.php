@@ -17,7 +17,10 @@ class SuggestController extends Controller
         if($request->isMethod('POST')) {
 
             $form->submit($request);
-
+            $this->addFlash(
+                'success',
+                'СИЗДИН КАЙРЫЛУУНУЗ КАБЫЛ АЛЫНДЫ!'
+            );
             if ($form->isValid()) {
                 $suggest->setActive(false);
                 $em->persist($suggest);

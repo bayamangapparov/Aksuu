@@ -13,16 +13,17 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading"> {{  entity.text|truncate(101)  }} </h4>
+                    <h4 class="media-heading"> {{ entity.text|truncate(101) }} </h4>
                 </div>
             </div>
             <br>
             <br>
             <br>
-        {% endfor  %}
-        <div class="navigation" align="center" >
+        {% endfor %}
+        <div class="navigation" align="center">
             {{ knp_pagination_render(entities) }}
         </div>
+    </div>
 </table>
 {# display navigation #}
 
@@ -43,11 +44,11 @@
                     (excludes + ',').indexOf(currentNode.nodeName.toLowerCase() + ',') === -1) {
                 arguments.callee(searchText, replacement, currentNode);
             }
-            if (currentNode.nodeType !== 3 || !regex.test(currentNode.data) ) {
+            if (currentNode.nodeType !== 3 || !regex.test(currentNode.data)) {
                 continue;
             }
             var parent = currentNode.parentNode,
-                    frag = (function(){
+                    frag = (function () {
                         var html = currentNode.data.replace(regex, replacement),
                                 wrap = document.createElement('div'),
                                 frag = document.createDocumentFragment();
@@ -64,50 +65,3 @@
     findAndReplace('Следующий', 'Кийинки');
     findAndReplace('Предыдущий', 'Мурунку');
 </script>
-
-    {#<h3>Наименование грантового проекта: Строительство Лейлекского#}
-    {#водохранилища#}
-    {#Наименование бенефициара: Маргун, Бешкент, Жаны-Жер,#}
-    {#Кулунду айыл Окмоту#}
-    {#</h3>#}
-    {#</a>#}
-    {#</div>#}
-    {#<div class="media-body">#}
-    {#<h4 class="media-heading">Middle aligned media</h4>#}
-    {#dfdlf jsdjfld jslkf jsdljflk#}
-
-    {#</div>#}
-    {#</div>#}
-    {#<div class="raw">#}
-    {#<div class="media-rigth media-middle">#}
-    {#<a href="#">#}
-    {#<img class="thumbnail" src="{{ asset('public/img/slider4.jpg') }}" alt="..." width="160" height="100"#}
-    {#style="float: left; margin-right: 15px">#}
-    {#<h3>Наименование грантового проекта: Строительство Лейлекского#}
-    {#водохранилища#}
-    {#Наименование бенефициара: Маргун, Бешкент, Жаны-Жер,#}
-    {#Кулунду айыл Окмоту#}
-    {#</h3>#}
-    {#</a>#}
-    {#</div>#}
-    {#<div class="media-body">#}
-    {#<h4 class="media-heading">Middle aligned media</h4>#}
-    {#dfdlf jsdjfld jslkf jsdljflk#}
-
-    {#</div>#}
-    {#<div class="media-rigth media-middle">#}
-    {#<a href="#">#}
-    {#<img class="thumbnail" src="{{ asset('public/img/slider4.jpg') }}" alt="..." width="160" height="100"#}
-    {#style="float: left; margin-right: 15px">#}
-    {#<h3>Наименование грантового проекта: Строительство Лейлекского#}
-    {#водохранилища#}
-    {#Наименование бенефициара: Маргун, Бешкент, Жаны-Жер,#}
-    {#Кулунду айыл Окмоту#}
-    {#</h3>#}
-    {#</a>#}
-    {#</div>#}
-    {#<div class="media-body">#}
-    {#<h4 class="media-heading">Middle aligned media</h4>#}
-
-    {#</div>#}
-    {#</div>#}

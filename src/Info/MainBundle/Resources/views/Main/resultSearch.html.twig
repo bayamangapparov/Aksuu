@@ -1,0 +1,19 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            {# left Menu start#}
+            {{ render(controller('InfoPageBundle:Page:leftMenu')) }}
+            {# left Menu end#}
+
+            <div class="col-md-7">
+                {{ include('InfoNewsBundle:News:listMainNews.html.twig') }}
+            </div>
+            {# right menu start  #}
+            {{ include('InfoPageBundle:Default:rightMenu.html.twig') }}
+            {# right menu end #}
+        </div>
+    </div>
+
+{% endblock %}
