@@ -9,14 +9,12 @@ class PageController extends Controller
 {
     public function topMenuAction()
     {
-        $top = $this->getDoctrine()->getRepository('InfoPageBundle:PagePosition')->findOneByTitle('top');
-        $topMenu = $this->getDoctrine()->getRepository('InfoPageBundle:Page')->findByPagePosition($top);
+        $topMenu = $this->getDoctrine()->getRepository('InfoPageBundle:Page')->findByPos('top');
         return $this->render('InfoPageBundle:Page:topMenu.html.twig', array('entity' => $topMenu));
     }
     public function leftMenuAction()
     {
-        $left = $this->getDoctrine()->getRepository('InfoPageBundle:PagePosition')->findOneByTitle('left');
-        $leftMenu = $this->getDoctrine()->getRepository('InfoPageBundle:Page')->findByPagePosition($left);
+        $leftMenu = $this->getDoctrine()->getRepository('InfoPageBundle:Page')->findByPos('left');
         return $this->render('InfoPageBundle:Page:leftMenu.html.twig', array('entity' => $leftMenu));
     }
 

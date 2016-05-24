@@ -49,6 +49,7 @@ class PageAdmin extends Admin
         $formMapper
             ->add('title')
             ->add('text', 'ckeditor')
+            ->add('pos')
         ;
     }
 

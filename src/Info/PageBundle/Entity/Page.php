@@ -22,12 +22,11 @@ class Page
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Info\PageBundle\Entity\PagePosition", cascade={"persist"})
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="page_position_id", referencedColumnName="id", nullable=true )
-     * })
+     * @var string
+     *
+     * @ORM\Column(name="pagepos", type="string", length=255)
      */
-    private $pagePosition;
+    private $pos;
 
     /**
      * @var string
@@ -103,16 +102,18 @@ class Page
     /**
      * @return mixed
      */
-    public function getPagePosition()
+    public function getPos()
     {
-        return $this->pagePosition;
+        return $this->pos;
     }
 
     /**
-     * @param mixed $pagePosition
+     * @param mixed $pos
      */
-    public function setPagePosition($pagePosition)
+    public function setPos($pos)
     {
-        $this->pagePosition = $pagePosition;
+        $this->pos = $pos;
     }
+
+
 }

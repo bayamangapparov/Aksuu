@@ -20,7 +20,7 @@ class NewsController extends Controller
 
         $paginator = $this->get('knp_paginator');
 
-        $pagination = $paginator->paginate($entities, $request->query->getInt('page', 1),1);
+        $pagination = $paginator->paginate($entities, $request->query->getInt('page', 1),5);
 
 
         return $this->render('InfoNewsBundle:News:listMainNews.html.twig', array('entities' => $pagination));

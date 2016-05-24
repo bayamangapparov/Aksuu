@@ -50,7 +50,7 @@ class NewsAdmin extends Admin
     {
         $formMapper
             ->add('title')
-            ->add('text')
+            ->add('text', 'ckeditor')
             ->add('photo', 'sonata_type_model_list', array(), array(
                 'link_parameters' => array(
                     'context' => 'news',
