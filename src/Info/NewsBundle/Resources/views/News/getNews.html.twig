@@ -1,7 +1,21 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-    <h1 style="color:#2f2bff; font-size: 70" >{{ news.title }}<br> </h1>
-    <h3>{{ news.text }} </h3> <br>
-    {{ news.date | date('d.m.Y') }}
-    <br><br>
+    <div class="container">
+        <div class="row">
+            {# left Menu start#}
+            {{ render(controller('InfoPageBundle:Page:leftMenu')) }}
+            {# left Menu end#}
+
+            <div class="col-md-9">
+                <h1 style="color:#2f2bff;  text-align: center" >{{ news.title }}<br> </h1>
+                <h3>{{ news.text | raw }} </h3> <br>
+                {{ news.date | date('d.m.Y') }}
+                 <br><br>
+            </div>
+            {# right menu start  #}
+            {#{{ include('InfoPageBundle:Default:rightMenu.html.twig') }}#}
+            {# right menu end #}
+        </div>
+    </div>
+
 {% endblock %}
