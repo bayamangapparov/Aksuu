@@ -11,6 +11,11 @@ body{
     margin-bottom:35px;
 }
 
+.fcont{
+    background-color: midnightblue;
+    color: white;
+}
+
 .buttonspend{
 
     height: 24px;
