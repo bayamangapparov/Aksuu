@@ -1,11 +1,13 @@
-import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700&subset=latin,cyrillic);
 body{
     font-family: 'Roboto Slab', serif !important;
 }
 
-.footer{
+.footer-bg{
     width:100% ;
     height:auto;
     text-align: center;
-    background-color: #c6a09a;
+    background-color: #e7e7e7;
+    margin-bottom:35px;
 }
+

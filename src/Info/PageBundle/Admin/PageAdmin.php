@@ -30,7 +30,6 @@ class PageAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('title')
-            ->add('text')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
