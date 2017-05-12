@@ -7,7 +7,17 @@ body{
     width:100% ;
     height:auto;
     text-align: center;
-    background-color: #e7e7e7;
+    background-color: #2fe724;
     margin-bottom:35px;
 }
 
+.buttonspend{
+
+    height: 24px;
+    color:black;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    padding-bottom: 24px;
+
+}
