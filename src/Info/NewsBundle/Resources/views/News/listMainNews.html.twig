@@ -3,21 +3,19 @@
     <div class="content">
         <h2>Жанылыктар</h2>
         {% for entity in entities %}
-            <div class="raw">
-                <div class="media-rigth media-middle">
+            <div class="raw newsBack">
+                <div class="media-rigth media-middle newsBack1">
                     <a href="{{ path('info_news_get', {'id':entity.id}) }}">
                         <div>
                             {% thumbnail entity.photo, 'small' with {'class': 'thumbnail','alt': '...', 'style': 'float: left; margin-right: 15px'} %}
                         </div>
-                        <h3>{{ entity.title }} </h3>
+                        <h5>{{ entity.title }} </h5>
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading"> {{ entity.text|truncate(101)|raw }} </h4>
+                    <p class="media-heading"> {{ entity.text|truncate(101)|raw }} </p>
                 </div>
             </div>
-            <br>
-            <br>
             <br>
         {% endfor %}
         <div class="navigation" align="center">
