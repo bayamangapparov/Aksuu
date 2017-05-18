@@ -17,10 +17,19 @@ body{
 }
 
 .fcont{
-    background-color: #8C8CC6;
+    background-color: #0e3759;
     color: white;
     margin-top: 34px;
 }
+
+.fcont li, a{
+    color:white;
+}
+
+.fcont-column1  li, a:hover{
+    color: #02bfe7;
+}
+
 
 .buttonspend{
 
@@ -72,9 +81,13 @@ body{
 }
 
 .nav-pills{
-    background-color:#ECECEC;
+    background-color:rgb(51, 122, 183);
     padding-left: 0;
     padding-right: 0;
+}
+
+.nav-pills a{
+    color:white;
 }
 
 .col-md-3 a:hover{
