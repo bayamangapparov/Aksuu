@@ -1,4 +1,4 @@
-    <div class="container">
+<div class="container header" xmlns="http://www.w3.org/1999/html">
         <div class="row">
             <div class="col-md-2">
                 <a class="navbar-brand" href="{{ path('info_main_homepage') }}">
@@ -6,19 +6,26 @@
                 </a>
             </div>
             <div class="col-md-7 text-left">
-                <h2 style="font-family: 'Roboto Slab', serif !important; color: #173eff">АК-СУУ РАЙОНУНУН МАМЛЕКЕТТИК АДМИНИСТРАЦИЯСЫ</h2>
+                <h2 style="font-family: 'Roboto Slab', serif !important; color: white">АК-СУУ РАЙОНУНУН МАМЛЕКЕТТИК АДМИНИСТРАЦИЯСЫ</h2>
             </div>
             <div class="col-md-3">
                 <br>
                 <br>
                 <form name="search" action="{{ path('info_main_search') }}" method="post">
-                    <input type="text" name="search" placeholder="издөө..." >
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                </form>
+                    <div class="input-group">
+                        <input type="text"  name="search" class="form-control" placeholder="издөө...">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+
+								</span>
+							</button>
+                            </span>
+                            </div>
+                            </form>
                 </div>
             </div>
         </div>
-    </div>
     <br>
     <br>
    {# start top menu #}
