@@ -65,5 +65,9 @@ body{
     background-color:#ECECEC;
 }
 
+.col-md-3 a:hover{
+    color:white;
+    background-color: #337ab7 !important;
+}
 
 
