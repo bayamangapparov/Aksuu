@@ -53,6 +53,15 @@ body{
     color:white;
 }
 
+.Corous{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.carousImg img{
+    width: 100%;
+}
+
 .newsBack{
     background-color:#ECECEC;
 }
@@ -61,8 +70,10 @@ body{
    font-size: 15px;
 }
 
-.col-md-3{
+.col-md-3-left{
     background-color:#ECECEC;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .col-md-3 a:hover{
