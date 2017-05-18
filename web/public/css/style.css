@@ -17,8 +17,9 @@ body{
 }
 
 .fcont{
-    background-color: midnightblue;
+    background-color: #8C8CC6;
     color: white;
+    margin-top: 34px;
 }
 
 .buttonspend{
@@ -70,7 +71,7 @@ body{
    font-size: 15px;
 }
 
-.col-md-3-left{
+.nav-pills{
     background-color:#ECECEC;
     padding-left: 0;
     padding-right: 0;
