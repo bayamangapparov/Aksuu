@@ -4,32 +4,6 @@ body{
 
 }
 
-.navbar{
-    margin-bottom: 0px;
-}
-
-.footer-bg{
-    width:100% ;
-    height:auto;
-    text-align: center;
-    background-color: #2fe724;
-    margin-bottom:35px;
-}
-
-.fcont{
-    background-color: #0e3759;
-    color: white;
-    margin-top: 34px;
-}
-
-.fcont li, a{
-    color:white;
-}
-
-.fcont-column1  li, a:hover{
-    color: black;
-}
-
 
 .buttonspend{
 
@@ -52,14 +26,18 @@ body{
     color:white;
 }
 .top-menu{
-    margin-top: 2px;
     width: 100%;
     height: 50px;
-    background-color: 	white;
+    background-color: #072640;
     color: white;
+    margin-bottom: 0;
 }
 
-.top1{
+.navbar{
+    margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a{
     color:white;
 }
 
@@ -95,12 +73,34 @@ body{
     color:white;
 }
 
+
+.nav-pills li hr{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 .col-md-3 a:hover{
     color:white;
     background-color: #0e3759 !important;
 }
 
-.nav-pills li hr{
-    margin-bottom: 0;
-    margin-top: 0;
+.fcont{
+    background-color: #072640;
+    color: white;
+    margin-top: 34px;
+}
+
+.fcont li, a{
+    color:white;
+}
+
+.fcont-column1  li, a:hover{
+    color: black;
+}
+.footer-bg{
+    width:100% ;
+    height:auto;
+    text-align: center;
+    background-color: #2fe724;
+    margin-bottom:35px;
 }

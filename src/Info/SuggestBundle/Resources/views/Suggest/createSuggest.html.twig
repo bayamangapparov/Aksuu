@@ -11,26 +11,26 @@
             {{ render(controller('InfoPageBundle:Page:leftMenu')) }}
             {# left Menu end#}
 
-            <div class="col-md-7">
+            <div class="col-sx-7">
 
                 {{ form_start(form) }}
-                <div class="col-md-12" style="text-align: center">
+                <div class="col-sx-12" style="text-align: center">
                     <label>ФИО</label>
                     {{ form_widget(form.name, {'attr':{'class':'form-control'} }) }}
                 </div><br/>
-                <div class="col-md-12" style="text-align: center; margin-top: 25px">
+                <div class="col-sx-12" style="text-align: center; margin-top: 25px">
                     <label>Телефон номериңиз</label>
                     {{ form_widget(form.phonenumber, {'attr':{'class':'form-control'} }) }}
                 </div><br/>
-                <div class="col-md-12" style="text-align: center; margin-top: 25px">
+                <div class="col-sx-12" style="text-align: center; margin-top: 25px">
                     <label>E-mail адрессиңиз</label>
                     {{ form_widget(form.email, {'attr':{'class':'form-control'} }) }}
                 </div><br/>
-                <div class="col-md-12" style="text-align: center; margin-top: 25px">
+                <div class="col-sx-12" style="text-align: center; margin-top: 25px">
                     <label>Кат</label>
                     {{ form_widget(form.message, {'attr':{'class':'form-control', 'style':'height: 233px; width: 624px;'} }) }}
                 </div>
-                <div class="col-md-12" style="text-align: center; margin-top: 25px; margin-bottom: 20px">
+                <div class="col-sx-12" style="text-align: center; margin-top: 25px; margin-bottom: 20px">
                     <label>Сыр соз</label>
                     {{ form_widget(form.captcha) }}
                 </div>
