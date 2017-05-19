@@ -27,7 +27,7 @@ body{
 }
 
 .fcont-column1  li, a:hover{
-    color: #02bfe7;
+    color: black;
 }
 
 
@@ -77,7 +77,12 @@ body{
 }
 
 .newsBack1 h5{
-   font-size: 15px;
+    font-size: 15px;
+    color:#337ab7 !important;
+}
+
+.newsBack1 h5 a:hover{
+    back-color:#0e3759 !important;
 }
 
 .nav-pills{
@@ -92,7 +97,10 @@ body{
 
 .col-md-3 a:hover{
     color:white;
-    background-color: #337ab7 !important;
+    background-color: #0e3759 !important;
 }
 
-
+.sty{
+    border-top: 1px solid;
+    color:red;
+}

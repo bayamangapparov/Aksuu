@@ -1,11 +1,18 @@
 <div class="col-md-3 leftMenu">
 
     <ul class="nav nav-pills nav-stacked">
+
         {% for page in entity %}
+
             <li role="presentation">
-                <a href="{{ path('info_page_get', {'id':page.id}) }}">{{ page.title }}</a>
+
+                <a href="{{ path('info_page_get', {'id':page.id}) }}"> {{ page.title }}</a>
             </li>
+
         {% endfor %}
+
+
         <li role="presentation"><a href="{{ path('info_suggest_list') }}">Суроо-жооптор</a></li>
+
     </ul>
 </div>
