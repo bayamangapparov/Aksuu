@@ -3,6 +3,7 @@
         {% for page in entity %}
             <li role="presentation">
                 <a href="{{ path('info_page_get', {'id':page.id}) }}">{{ page.title }}</a>
+                <hr>
             </li>
         {% endfor %}
         <li role="presentation"><a href="{{ path('info_suggest_list') }}">Суроо-жооптор</a></li>
