@@ -41,6 +41,11 @@ body{
     color:white;
 }
 
+.navbar-default .navbar-nav > li > a:hover{
+   color: black;
+    background-color: white;
+}
+
 .Corous{
     padding-left: 0;
     padding-right: 0;
@@ -59,9 +64,6 @@ body{
     color:#337ab7 !important;
 }
 
-.newsBack1 h5 a:hover{
-    back-color:#0e3759 !important;
-}
 
 .nav-pills{
     background-color:rgb(51, 122, 183);
